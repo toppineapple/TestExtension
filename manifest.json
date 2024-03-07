@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "URL Saver",
+  "version": "1.0",
+  "description": "Automatically save the current page's URL to Chrome storage",
+  "permissions": ["storage", "activeTab"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    "icon128.png"
+  ]
+}
+
